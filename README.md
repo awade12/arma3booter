@@ -1,6 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arma 3 Launcher
 
-## Getting Started
+A modern web-based launcher for Arma 3 servers.
+
+## Deployment
+
+1. Clone this repository:
+```bash
+git clone https://github.com/andrewwade/arma3booter.git
+cd arma3booter
+```
+
+2. Create a `.env` file with your database URL:
+```bash
+DB_URL=your_database_url_here
+```
+
+3. Start the application:
+```bash
+docker compose up -d
+```
+
+The launcher will be available at `http://your-server:45096`
+
+## Updating
+
+To update to the latest version:
+
+1. Make the update script executable:
+```bash
+chmod +x update.sh
+```
+
+2. Run the update script:
+```bash
+./update.sh
+```
+
+This will:
+- Pull the latest changes from the repository
+- Download the latest Docker image
+- Restart the application with the updates
+
+## Development
 
 First, run the development server:
 
@@ -14,7 +55,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:45096](http://localhost:45096) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
